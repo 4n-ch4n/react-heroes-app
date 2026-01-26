@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { Link } from 'react-router';
 import {
   Breadcrumb,
@@ -31,7 +32,7 @@ export const CustomBreadcrumbs = ({ currentPage, breadCrumbItems }: Props) => {
 
         {breadCrumbItems &&
           breadCrumbItems.map((item) => (
-            <>
+            <Fragment key={item.url}>
               <BreadcrumbSeparator>
                 <DotIcon />
               </BreadcrumbSeparator>
@@ -41,7 +42,7 @@ export const CustomBreadcrumbs = ({ currentPage, breadCrumbItems }: Props) => {
                   <Link to={item.url}>{item.label}</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
-            </>
+            </Fragment>
           ))}
 
         <BreadcrumbSeparator>
