@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Progress } from '@/components/ui/progress';
 import { useQuery } from '@tanstack/react-query';
-import { getHeroAction } from '@/heroes/actions/get-hero';
+import { getHeroAction } from '@/heroes/actions/get-hero.action';
 
 const getStatusColor = (status: string) => {
   switch (status.toLowerCase()) {
